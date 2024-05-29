@@ -1,0 +1,27 @@
+{
+  "version": "6",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1716943288909,
+      "tag": "0000_concerned_shiva",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1716951512220,
+      "tag": "0001_purple_thundra",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1716952910576,
+      "tag": "0002_nosy_vapor",
+      "breakpoints": true
+    }
+  ]
+}

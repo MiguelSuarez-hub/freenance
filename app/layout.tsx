@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import { QueryProvider } from "@/providers/query-provider";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
       <html lang="es">
         <body className={nunito.className}>
           <Header />
-          {children}
+          <QueryProvider>{children}</QueryProvider>
         </body>
       </html>
     </ClerkProvider>

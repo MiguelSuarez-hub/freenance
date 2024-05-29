@@ -1,0 +1,1 @@
+ALTER TABLE "my_schema"."records" ADD COLUMN "userId" text;
