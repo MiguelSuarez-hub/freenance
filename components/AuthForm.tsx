@@ -22,7 +22,7 @@ import CustomInput from "./CustomInput";
 import { authFormSchema } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { signUp } from "@/lib/actions/user.actions";
+import { signIn, signUp } from "@/lib/actions/user.actions";
 
 const AuthForm = ({ type }: { type: string }) => {
   const router = useRouter();
@@ -46,11 +46,11 @@ const AuthForm = ({ type }: { type: string }) => {
     setIsLoading(true);
     try {
       if (type === "sign-in") {
-        // const res = await signIn({
-        //   email: data.email,
-        //   password: data.password,
-        // });
-        // if (res) router.push("/");
+        const res = await signIn({
+          email: data.email,
+          password: data.password,
+        });
+        if (res) router.push("/");
       }
       if (type === "sign-up") {
         const newUser = await signUp(data);
